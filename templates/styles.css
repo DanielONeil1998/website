@@ -1,0 +1,61 @@
+
+/*Setting up font standardization*/
+@font-face { font-family: 'Metropolis-Regular'; src: url('Metropolis-Regular.otf'); } 
+ @font-face { font-family: 'Metropolis-Regular'; font-weight: bold; src: url('Metropolis-Regular.otf');}*/
+
+ /*Setting up primary style attributes*/
+ body {background-color: #FFFFFF;}
+  :is(h1, h2, h3, h4, h5, h6, p) {color: #111111; font-family: 'Metropolis-Regular', sans-seriff;}
+
+  .myDiv 
+  { 
+    border-left: 3px solid #DDDDDD; border-right: 3px solid #DDDDDD; 
+    padding: 10px; min-width: 820px; max-width: 1500px;
+    background-color: #EEEEEE; margin-left:auto; margin-right:auto;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Specifying column parameters */
+  .column1 
+  {
+    float: left;
+    width: 40%;
+    padding: 10px;
+  }
+  .column2 
+  {
+    float: left;
+    width: 60%;
+    padding: 10px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after 
+  {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Setting up button style standardization */
+  .button 
+  {
+      background-color: #8e8e8e; color: black;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-bottom: 4px;
+  }
+
+  .button:hover {
+    background-color: #525252;
+    color: white;
+    cursor: pointer
+  }
