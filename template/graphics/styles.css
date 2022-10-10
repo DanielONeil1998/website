@@ -1,7 +1,7 @@
 
 /*Setting up font standardization*/
-@font-face { font-family: 'Metropolis-Regular'; src: url('Metropolis-Regular.otf'); } 
- @font-face { font-family: 'Metropolis-Regular'; font-weight: bold; src: url('Metropolis-Regular.otf');}*/
+@font-face { font-family: 'Metropolis-Regular'; src: url('../fonts/Metropolis-Regular.otf'); } 
+ @font-face { font-family: 'Metropolis-Regular'; font-weight: bold; src: url('../fonts/Metropolis-Regular.otf');}*/
 
  /*Setting up primary style attributes*/
  body {background-color: #FFFFFF;}
