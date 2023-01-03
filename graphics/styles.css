@@ -4,14 +4,15 @@
  @font-face { font-family: 'Metropolis-Regular'; font-weight: bold; src: url('../fonts/Metropolis-Regular.otf');}*/
 
  /*Setting up primary style attributes*/
- body {background-color: #FFFFFF;}
-  :is(h1, h2, h3, h4, h5, h6, p) {color: #111111; font-family: 'Metropolis-Regular', sans-seriff;}
+
+ body {background-color: #2c2c2c;}
+  :is(h1, h2, h3, h4, h5, h6, p) {color: #000000; font-family: 'Metropolis-Regular', sans-seriff;}
 
   .myDiv 
   { 
-    border-left: 3px solid #DDDDDD; border-right: 3px solid #DDDDDD; 
-    padding: 10px; min-width: 820px; max-width: 1500px;
-    background-color: #EEEEEE; margin-left:auto; margin-right:auto;
+    border-left: 2px solid #696969; border-right: 2px solid #696969; 
+    padding: 10px; min-width: 820px; max-width: 1500px; height: auto;
+    background-color: #d8d8d8; margin-left:auto; margin-right:auto;
     word-wrap: normal;
   }
 
@@ -23,14 +24,14 @@
   .column1 
   {
     float: left;
-    width: 40%;
+    width: 45%;
     padding: 10px;
   }
   .column2 
   {
     float: left;
-    width: 60%;
-    padding: 10px;
+    width: 55%;
+    padding: 0px;
   }
 
   /* Clear floats after the columns */
@@ -44,26 +45,26 @@
   /* Setting up button style standardization */
   .button 
   {
-      background-color: #8e8e8e; color: black;
+      background-color: #636363; color: black;
       border: none;
       color: white;
-      padding: 15px 30px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
       font-size: 16px;
-      margin-bottom: 4px;
+      width: 24%;
+      height: 40px;
   }
 
   .button:hover {
-    background-color: #525252;
+    background-color: #363636;
     color: white;
     cursor: pointer
   }
 
   .buttonSelected 
   {
-      background-color: #525252; color: black;
+      background-color: #000000; color: black;
       border: none;
       color: white;
       padding: 15px 30px;
@@ -74,3 +75,46 @@
       margin-bottom: 4px;
       cursor: pointer
   }
+
+  /*Dropdown Language Menu*/
+  .dropbtn 
+  {
+    background-color: #636363; color: black;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 210px;
+    height: 40px;
+  }
+
+  .dropdown 
+  {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content 
+  {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 210px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a 
+  {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #000000; font-family: 'Metropolis-Regular', sans-seriff;
+  }
+
+  .dropdown-content a:hover {background-color: #ddd;}
+  .dropdown:hover .dropdown-content {display: block;}
+  .dropdown:hover .dropbtn {background-color: #363636;}

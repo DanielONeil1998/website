@@ -12,22 +12,27 @@
 <!-- Javascript section -->
 <script>
 var language ="eng";
-//Function performing translation text swap
-function newText() {
-    var x = document.getElementById("bodyTextEng");
-    var y = document.getElementById("languageButton");
-    var z = document.getElementById("bodyTextCh");
-    if (language === "eng") {
-        x.hidden = true;
-        z.hidden = false;
-        y.innerHTML = "English";
-        language = "chi";
-    } else {
-        x.hidden = false;
-        z.hidden = true;
-        y.innerHTML = "中文";
-        language = "eng";
-    }
+
+//Function displaying Chinese text
+function toChinese() 
+{
+    var eng = document.getElementById("bodyTextEng");
+    var chi = document.getElementById("bodyTextCh");
+    document.getElementById("aboutMe").innerHTML = "关于我";
+    eng.hidden = true;
+    chi.hidden = false;
+    language = "chi";
+}
+
+//Function displaying English text
+function toEnglish() 
+{
+    var eng = document.getElementById("bodyTextEng");
+    var chi = document.getElementById("bodyTextCh");
+    document.getElementById("aboutMe").innerHTML = "About Me";
+    eng.hidden = false;
+    chi.hidden = true;
+    language = "eng";
 }
 </script>
 
@@ -35,7 +40,15 @@ function newText() {
 <div class="myDiv" id="div1">
 
     <h1>Daniel O'Neil</h1>
-    <button id="languageButton" class="button" onclick="newText()">中文</button>
+    <!--   <button id="languageButton" class="button" onclick="newText()">中文</button>   -->
+
+    <div class="dropdown">
+        <button class="dropbtn">Display Language / 语言   ▽</button>
+        <div class="dropdown-content">
+          <a onclick="toEnglish()">English</a>
+          <a onclick="toChinese()">中文</a>
+        </div>
+      </div>
     <hr>
 
     <!-- Setting up the columns to hold the resume and the miscellaneous information about myself-->
@@ -44,7 +57,7 @@ function newText() {
         <!-- The information column -->
         <div id="div3" class="column1">
             <img src="graphics/placeholder.jpg" alt="Placeholder image of Myself">
-            <h2>About Me</h2>
+            <h2 id="aboutMe">About Me</h2>
             <p id="bodyTextEng">I am a Software Engineer currently working at JASCO Applied Sciences, graduated from Dalhousie University, and my technical proficiencies include both front-end and back-end development alongside QA experience.
                 <br><br>I have experience in application development, application testing, troubleshooting, and technical document writing; the details of which may be found in my resume.
                 <br><br>I am well-versed in a number of programming languages with a special emphasis on Java and C, as well as collaboratrive programming paradigms such as Agile.
@@ -55,7 +68,7 @@ function newText() {
                 <br><br>我评估应用程序过, 开发了应用, 故障排除, 而且写了英语官方文件。我的简历有更多细节。
                 <br><br>我认识些个程序语言但是我主要用Java和C而且团队程序方法,Agile。
                 <br><br>除了程序, 我喜欢锻炼, 画画, Brazilian Jiu-Jitsu, 冲浪, 最后我喜欢学习语言。我过了第二汉语水平考试和这些天我学习挪威语。
-                <br><br>我还在教中学教田径。
+                <br><br>我还在教中学田径。
                 <br><br>我的社交媒体资料是下面。</p>
 
             <!-- This button sends the user to my LinkedIn profile-->
@@ -66,14 +79,15 @@ function newText() {
 
             <!-- This button sends the user to my Tandem profile-->
             <button class="button" href="#" onclick='window.open("https://app.tandem.net/en/community/jjkffefjjkffefd");return false;'>Tandem</button>
+
+            <!-- This button sends the user to my GitHub profile-->
+            <button class="button" href="#" onclick='window.open("https://github.com/DanielONeil1998");return false;'>GitHub</button>
         </div>
         <!-- The CV column -->
-        <div class="column2"  style="display:table; margin-left:auto;">
-            <embed src="CV_DanielONeil_CS.pdf" width="800px" height="1000px" />
+        <div class="column2"  style="display:table; margin-left:auto; text-align:right">
+            <embed src="CV_DanielONeil_CS.pdf" width="800px" height="750px" />
         </div>
     </div>
-
 </div>
-
 </body>
 </html>
