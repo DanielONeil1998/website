@@ -1,0 +1,6 @@
+I am a Software Engineer currently working at JASCO Applied Sciences, graduated from Dalhousie University, and my technical proficiencies include both front-end and back-end development alongside QA experience.
+                <br><br>I have experience in application development, application testing, troubleshooting, and technical document writing; the details of which may be found in my resume.
+                <br><br>I am well-versed in a number of programming languages with a special emphasis on Java and C, as well as collaboratrive programming paradigms such as Agile.
+                <br><br>Outside of programming, my interests include weightlifting, painting, Brazilian Jiu-Jitsu, surfing, and language learning. I have obtained Mandarin Chinese HSK II, and I'm currently working towards a certificate in Norwegian proficiency.
+                <br><br>I've also been helping coach Jr. High and High School track and field teams in the HRM for the past five years when such programs were available.
+                <br><br>Below you may find links to various online profiles of mine.

@@ -5,29 +5,43 @@
 <head>
     <title>Daniel O'Neil.ca</title>
     <link rel="stylesheet" href="graphics/styles.css">
+    <meta charset="utf-8"> 
 </head>
-<body>
 
-<div class="myDiv">
+
+<!-- Function performing translation text swap -->
+<script>
+function newText() {
+    var x = document.querySelector('#div1 #div2 #div3 p');
+    if (x.innerHTML === "Hello") {
+      x.innerHTML = "Swapped text!";
+    } else {
+      x.innerHTML = "Hello";
+    }
+}
+</script>
+
+<body>
+<div class="myDiv" id="div1">
 
     <h1>Daniel O'Neil</h1>
     <button class="buttonSelected" href="#">English</button>
-    <button class="button" href="#" onclick="location.href='index-cn.html'">中文</button>
+    <button class="button" onclick="newText()">中文</button>
     <hr>
 
     <!-- Setting up the columns to hold the resume and the miscellaneous information about myself-->
-    <div class="row">
+    <div id="div2" class="row">
 
         <!-- The information column -->
-        <div class="column1">
+        <div id="div3" class="column1">
             <img src="graphics/placeholder.jpg" alt="Placeholder image of Myself">
             <h2>About Me</h2>
-            <p>I am a Software Engineer currently working at JASCO Applied Sciences, graduated from Dalhousie University, and my technical proficiencies include both front-end and back-end development alongside QA experience.</p>
-            <p>I have experience in application development, application testing, troubleshooting, and technical document writing; the details of which may be found in my resume.</p>
-            <p>I am well-versed in a number of programming languages with a special emphasis on Java and C, as well as collaboratrive programming paradigms such as Agile.</p>
-            <p>Outside of programming, my interests include weightlifting, painting, Brazilian Jiu-Jitsu, surfing, and language learning. I have obtained Mandarin Chinese HSK II, and I'm currently working towards a certificate in Norwegian proficiency.</p>
-            <p>I've also been helping coach Jr. High and High School track and field teams in the HRM for the past five years when such programs were available.</p>
-            <p>Below you may find links to various online profiles of mine.</p>
+            <p id="bodyText">I am a Software Engineer currently working at JASCO Applied Sciences, graduated from Dalhousie University, and my technical proficiencies include both front-end and back-end development alongside QA experience.
+                <br><br>I have experience in application development, application testing, troubleshooting, and technical document writing; the details of which may be found in my resume.
+                <br><br>I am well-versed in a number of programming languages with a special emphasis on Java and C, as well as collaboratrive programming paradigms such as Agile.
+                <br><br>Outside of programming, my interests include weightlifting, painting, Brazilian Jiu-Jitsu, surfing, and language learning. I have obtained Mandarin Chinese HSK II, and I'm currently working towards a certificate in Norwegian proficiency.
+                <br><br>I've also been helping coach Jr. High and High School track and field teams in the HRM for the past five years when such programs were available.
+                <br><br>Below you may find links to various online profiles of mine.</p>
 
             <!-- This button sends the user to my LinkedIn profile-->
             <button class="button" href="#" onclick='window.open("https://www.linkedin.com/in/daniel-o-neil-5861a818b/");return false;'>LinkedIn</button>
@@ -38,7 +52,7 @@
             <!-- This button sends the user to my Tandem profile-->
             <button class="button" href="#" onclick='window.open("https://app.tandem.net/en/community/jjkffefjjkffefd");return false;'>Tandem</button>
         </div>
-        <!-- The resume column -->
+        <!-- The CV column -->
         <div class="column2"  style="display:table; margin-left:auto;">
             <embed src="CV_DanielONeil_CS.pdf" width="800px" height="1000px" />
         </div>
