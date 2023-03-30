@@ -12,6 +12,7 @@
 <!-- Javascript section -->
 <script>
 var language ="eng";
+var pic = "me";
 
 //Function displaying Chinese text
 function toChinese() 
@@ -33,6 +34,28 @@ function toEnglish()
     eng.hidden = false;
     chi.hidden = true;
     language = "eng";
+}
+
+//Function displaying the image of me
+function toMe()
+{
+    var me = document.getElementById("picMe");
+    var dog = document.getElementById("picDog");
+    //document.getElementById("aboutMe").innerHTML = "About Me";
+    me.hidden = false;
+    dog.hidden = true;
+    pic = "me";
+}
+
+//Function displaying the image of dog
+function toDog()
+{
+    var me = document.getElementById("picMe");
+    var dog = document.getElementById("picDog");
+    //document.getElementById("aboutMe").innerHTML = "About Me";
+    dog.hidden = false;
+    me.hidden = true;
+    pic = "me";
 }
 </script>
 
@@ -57,11 +80,13 @@ function toEnglish()
 
             <!-- The body text and image are outlined here-->
             <hr>
-            <img src="graphics/placeholder.jpg" alt="Placeholder image of Myself">
+            <!-- Adding in image-switching functionality -->
+            <img id=picMe src="graphics/handsomeLad.jpg" alt="Placeholder image of Myself", width: auto, height="190px", border="3px" solid #555; a onclick="toDog()">
+            <img id=picDog hidden src="graphics/freya.jpg" alt="Placeholder image of Myself", width: auto, height="190px", border="3px" solid #555; a onclick="toMe()">
             <h2 id="aboutMe">About Me</h2>
             <p id="bodyTextEng">I am a Software Engineer currently working at JASCO Applied Sciences, graduated from Dalhousie University, and my technical proficiencies include both front-end and back-end development alongside QA experience.
                 <br><br>I have experience in application development, application testing, troubleshooting, and technical document writing; the details of which may be found in my resume.
-                <br><br>I am well-versed in a number of programming languages with a special emphasis on Java and C, as well as collaboratrive programming paradigms such as Agile.
+                <br><br>I am well-versed in a number of programming languages with a special emphasis on Java and Python, as well as collaborative programming paradigms such as Agile.
                 <br><br>Outside of programming, my interests include weightlifting, painting, Brazilian Jiu-Jitsu, surfing, and language learning. I have obtained Mandarin Chinese HSK II, and I'm currently working towards a certificate in Norwegian proficiency.
                 <br><br>I've also been coaching Jr. High and High School track and field teams in the HRM for the past five years when such programs were available.
                 <br><br>Below you may find links to various online profiles of mine.</p>
